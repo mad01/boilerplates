@@ -7,6 +7,12 @@ from lib.httpl import http_post
 from lib.testdata import random_data
 
 
+""" This is written to work with nosetest, the print statmetnts
+in the libs will be supressed when if a test passes when nosetest
+is running. When it fails the print statments will be usefull for
+seeting the output data to find the issue"""
+
+
 class TestGenClass(unittest.TestCase):
     pass
 
