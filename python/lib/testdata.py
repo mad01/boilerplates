@@ -16,6 +16,37 @@ def random_hex():
     return choice(seedList)
 
 
+def randSpecialChar():
+    """return a random special character"""
+    return choice('''`~!@#$%^&*()_-+={}[]\|:;"'<>,\.?/''')
+
+
+def randChar():
+    """return a random character"""
+    return choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+
+
+def randPwStr():
+    """return a random special character string mixed with a-zA-Z, 0-9
+    with a random lenght between 2 and 64"""
+    seedList = []
+    seedList_len = randint(1, 128)
+    count = 0
+    while count < seedList_len:
+        strLen = 0
+        randStr = ""
+        while strLen < randint(1, 64):
+            randStr += str(
+                choice([randChar(), randSpecialChar(), randint(0, 9)])
+            )
+            strLen += 1
+
+        seedList.append(randStr)
+        count += 1
+
+    return choice(seedList)
+
+
 def random_data(num):
     """ will return json random float, hex and int
         {0: {
@@ -33,6 +64,7 @@ def random_data(num):
                     "hex": random_hex(),
                     "int": randint(1, 10**18),
                     "float": uniform(0.1, 10**3.01),
+                    "password": randPwStr()
                 }
             }
         )
