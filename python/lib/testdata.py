@@ -35,7 +35,7 @@ def randPwStr():
     while count < seedList_len:
         strLen = 0
         randStr = ""
-        while strLen < randint(1, 64):
+        while strLen < randint(2, 64):
             randStr += str(
                 choice([randChar(), randSpecialChar(), randint(0, 9)])
             )
@@ -52,7 +52,8 @@ def random_data(num):
         {0: {
                 'float': 186.66541583209647,
                 'hex': '43435c553c722359e386804f6b28d2c2ee3754456c38f5e7e68f',
-                'int': 851482763158959204
+                'int': 851482763158959204,
+                'password': '5AJ]-02X0J'
             }
         }"""
     data = {}
