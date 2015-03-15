@@ -48,7 +48,7 @@ def randPwStr():
 
 
 def random_data(num):
-    """ will return json random float, hex and int
+    """ will return json random float, hex, int and a random password
         {0: {
                 'float': 186.66541583209647,
                 'hex': '43435c553c722359e386804f6b28d2c2ee3754456c38f5e7e68f',
