@@ -31,6 +31,6 @@ if __name__ == "__main__":
     parser.add_argument('-s', '--str', help='input str', type=str)
     args = parser.parse_args()
 
-    file_path = os.path.abspath(os.path.abspath(args.file))
+    file_path = os.path.abspath(args.file)
     file_name = os.path.basename(file_path)
     cat(file_path)
