@@ -38,6 +38,10 @@ class TestRestGetCalls(unittest.TestCase):
         httpGet = checkAccess(self.oid, password=self.key, host=self.api)
         self.assertEqual(200, httpGet.status_code)
 
+    def testAccessInValidKey(self):
+        httpGet = checkAccess(self.oid, password="foobar", host=self.api)
+        self.assertEqual(401, httpGet.status_code)
+
 
 if __name__ == '__main__':
     unittest.main()
