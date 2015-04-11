@@ -14,7 +14,7 @@ def ses_send_html_mail(
 	message = MIMEMultipart()
 	message["Subject"] = subject
 	message["From"] = send_from
-	message["To"] = send_to # can be string of list of strings
+	message["To"] = send_to # can be string or list of strings
 
 	html = open(htmlFile, 'r').read()
 	attachment = MIMEText(html, 'html')
