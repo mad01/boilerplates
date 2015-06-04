@@ -1,0 +1,17 @@
+---
+- hosts: '{{ provision_on | mandatory }}'
+  remote_user: ubuntu
+  sudo: yes
+  tasks:
+    - name: install python-setuptools
+      apt: name=python-setuptools
+
+    - name: install python-dev
+      apt: name=python-dev
+
+    - name: install python-pip
+      apt: name=python-pip
+
+    - name: install ansible with pip
+      pip: name=ansible 
+
