@@ -1,0 +1,13 @@
+---
+- hosts: '{{ provision_on | mandatory }}'
+  remote_user: ubuntu
+  sudo: yes
+  tasks:
+    - name: testing container
+      docker:
+        name: testing
+        image: mad01/sshlab
+        state: started
+        pull: always
+        ports:
+          - "2201:22"
