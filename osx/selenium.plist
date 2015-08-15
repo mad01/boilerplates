@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>selenium</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>ProgramArguments</key>
+        <array>
+                <string>/usr/local/bin/selenium-server</string>
+                <string>-port</string>
+                <string>4444</string>
+        </array>
+        <key>ServiceDescription</key>
+        <string>Selenium Server</string>
+        <key>StandardErrorPath</key>
+        <string>/var/log/selenium/selenium-error.log</string>
+        <key>StandardOutPath</key>
+        <string>/var/log/selenium/selenium-output.log</string>
+</dict>
+</plist>
